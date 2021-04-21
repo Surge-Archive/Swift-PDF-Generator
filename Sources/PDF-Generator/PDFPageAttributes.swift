@@ -11,14 +11,11 @@ import UIKit
 public struct PDFPageAttributes {
     
     // Default to A4
-    var pageWidth: CGFloat = 8.25 * 72.0 // 594
-    var pageHeight: CGFloat = 11.75 * 72.0 // 846
+    public var pageWidth: CGFloat
+    public var pageHeight: CGFloat
+    public var pageMargin: UIEdgeInsets
     
-    var pageMargin = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
-    
-    public init() {}
-    
-    public init(pageWidth: CGFloat, pageHeight: CGFloat, pageMargin: UIEdgeInsets) {
+    public init(pageWidth: CGFloat = 8.25 * 72.0, pageHeight: CGFloat = 11.75 * 72.0, pageMargin: UIEdgeInsets = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)) {
         self.pageWidth = pageWidth
         self.pageHeight = pageHeight
         self.pageMargin = pageMargin

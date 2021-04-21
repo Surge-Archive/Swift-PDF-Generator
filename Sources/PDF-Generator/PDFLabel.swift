@@ -8,11 +8,17 @@
 import UIKit
 
 public struct PDFLabel: PDFObject {
-    var text: NSString
-    var rect: CGRect
-    var attributes: [NSMutableAttributedString.Key: NSObject]
+    public var text: NSString
+    public var rect: CGRect
+    public var attributes: [NSMutableAttributedString.Key: NSObject]
     
-    func draw() {
+    public init(text: NSString, rect: CGRect, attributes: [NSAttributedString.Key : NSObject]) {
+        self.text = text
+        self.rect = rect
+        self.attributes = attributes
+    }
+    
+    public func draw() {
         text.draw(in: rect, withAttributes: attributes)
     }
 }

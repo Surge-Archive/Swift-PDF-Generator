@@ -8,11 +8,19 @@
 import UIKit
 
 public struct PDFTable: PDFObject, Equatable {
-    var leftMargin: CGFloat = 0
-    var yPosition: PDFTableStartingYPosition = .auto
+    var leftMargin: CGFloat
+    var yPosition: PDFTableStartingYPosition
     var items: [[PDFTableItem]]
     var maxWidth: CGFloat?
-    var topMargin: CGFloat = 20
+    var topMargin: CGFloat
+    
+    internal init(leftMargin: CGFloat = 0, yPosition: PDFTableStartingYPosition = .auto, items: [[PDFTableItem]], maxWidth: CGFloat? = nil, topMargin: CGFloat = 20) {
+        self.leftMargin = leftMargin
+        self.yPosition = yPosition
+        self.items = items
+        self.maxWidth = maxWidth
+        self.topMargin = topMargin
+    }
     
     func getAlignment(pageWidth: CGFloat) -> PDFTableAlignment {
         if maxWidth == nil {
@@ -27,7 +35,7 @@ public struct PDFTable: PDFObject, Equatable {
     }
 }
 
-indirect enum PDFTableStartingYPosition {
+public indirect enum PDFTableStartingYPosition {
     case auto
     case newPage
     case fixed(_ position: CGFloat)

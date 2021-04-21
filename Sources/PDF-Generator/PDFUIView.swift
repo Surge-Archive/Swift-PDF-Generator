@@ -21,7 +21,7 @@ public struct PDFUIView: PDFObject {
         self.updateYPositionOnSide = updateYPositionOnSide
     }
     
-    func draw() {
+    public func draw() {
         image.draw(in: rect)
     }
 }
