@@ -14,7 +14,7 @@ public struct PDFUIView: PDFObject {
     var updateYPositionOnSide: PDFTableAlignment = .all
     let image: UIImage
     
-    init(view: UIView, startOnNewPage: Bool = false, rect: CGRect, updateYPositionOnSide: PDFTableAlignment = .all) {
+    public init(view: UIView, startOnNewPage: Bool = false, rect: CGRect, updateYPositionOnSide: PDFTableAlignment = .all) {
         self.rect = rect
         self.startOnNewPage = startOnNewPage
         self.image = view.asImage()

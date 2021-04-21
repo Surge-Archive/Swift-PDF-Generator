@@ -17,17 +17,17 @@ public struct PDFTableItem: Equatable {
     var isLargeCell: Bool = false
     var horizontalScaleFactor: CGFloat { return isLargeCell ? 1.5 : 1 }
     
-    init(header: String) {
+    public init(header: String) {
         self.header = header
     }
 
-    init(body numericalValue: Int64?) {
+    public init(body numericalValue: Int64?) {
         if let numericalValue = numericalValue {
             body = String(describing: numericalValue)
         }
     }
 
-    init(header: String? = nil, body: String? = nil, footer: String? = nil, largeCell: Bool = false, markerColor: UIColor? = nil, backgroundColor: UIColor? = nil) {
+    public init(header: String? = nil, body: String? = nil, footer: String? = nil, largeCell: Bool = false, markerColor: UIColor? = nil, backgroundColor: UIColor? = nil) {
         self.header = header
         self.body = body
         self.footer = footer

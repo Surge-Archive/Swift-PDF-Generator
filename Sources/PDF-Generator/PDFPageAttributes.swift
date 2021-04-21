@@ -16,6 +16,14 @@ public struct PDFPageAttributes {
     
     var pageMargin = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
     
+    public init() {}
+    
+    public init(pageWidth: CGFloat, pageHeight: CGFloat, pageMargin: UIEdgeInsets) {
+        self.pageWidth = pageWidth
+        self.pageHeight = pageHeight
+        self.pageMargin = pageMargin
+    }
+    
     func getHighestXBound() -> CGFloat {
         return pageHeight - pageMargin.bottom
     }

@@ -22,7 +22,7 @@ public struct PDFTable: PDFObject, Equatable {
         }
     }
     
-    static func == (lhs: PDFTable, rhs: PDFTable) -> Bool {
+    public static func == (lhs: PDFTable, rhs: PDFTable) -> Bool {
         return lhs.items == rhs.items
     }
 }
@@ -33,7 +33,7 @@ indirect enum PDFTableStartingYPosition {
     case fixed(_ position: CGFloat)
 }
 
-enum PDFTableAlignment {
+public enum PDFTableAlignment {
     case left
     case right
     case all

@@ -15,7 +15,7 @@ public class PDFCreator: NSObject {
     var latestYPosition: (CGFloat, CGFloat) = (0, 0)
     var pageNumber: Int = 0
 
-    init(objects: [PDFObject], pageAttributes: PDFPageAttributes = PDFPageAttributes()) {
+    public init(objects: [PDFObject], pageAttributes: PDFPageAttributes = PDFPageAttributes()) {
         super.init()
         
         self.pageAttributes = pageAttributes
