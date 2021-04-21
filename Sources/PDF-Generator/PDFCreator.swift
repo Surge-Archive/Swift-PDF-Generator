@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PDFCreator: NSObject {
+public class PDFCreator: NSObject {
     
     var pageAttributes: PDFPageAttributes = PDFPageAttributes()
     
