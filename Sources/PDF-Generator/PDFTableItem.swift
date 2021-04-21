@@ -8,7 +8,7 @@
 import Foundation
 import UIKit.UIColor
 
-struct PDFTableItem: Equatable {
+public struct PDFTableItem: Equatable {
     var header: String?
     var body: String?
     var footer: String?

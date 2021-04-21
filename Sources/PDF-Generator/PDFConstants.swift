@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PDFConstants {
+public class PDFConstants {
     
     typealias PDFTextAttributes = [NSMutableAttributedString.Key: NSObject]
     

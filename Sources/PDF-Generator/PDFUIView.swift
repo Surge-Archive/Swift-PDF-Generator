@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct PDFUIView: PDFObject {
+public struct PDFUIView: PDFObject {
     
     var rect: CGRect
     var startOnNewPage: Bool = false

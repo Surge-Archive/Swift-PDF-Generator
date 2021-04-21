@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct PDFLabel: PDFObject {
+public struct PDFLabel: PDFObject {
     var text: NSString
     var rect: CGRect
     var attributes: [NSMutableAttributedString.Key: NSObject]

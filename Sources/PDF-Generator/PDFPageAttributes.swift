@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct PDFPageAttributes {
+public struct PDFPageAttributes {
     
     // Default to A4
     var pageWidth: CGFloat = 8.25 * 72.0 // 594

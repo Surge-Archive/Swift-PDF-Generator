@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct PDFTable: PDFObject, Equatable {
+public struct PDFTable: PDFObject, Equatable {
     var leftMargin: CGFloat = 0
     var yPosition: PDFTableStartingYPosition = .auto
     var items: [[PDFTableItem]]
