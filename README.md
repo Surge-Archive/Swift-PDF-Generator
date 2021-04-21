@@ -2,13 +2,13 @@
 
 A lightweight PDF generator built in Swift. You can install it using Swift Package Manager. 
 
-## Create a label:
+## Create a label
 ```swift
 PDFLabel(text: "My text", rect: CGRect(x: 90, y: 40, width: 200, height: 30), 
   attributes: PDFConstants.h1Attributes)
 ```
 
-## Create a table:
+## Create a table
 ```swift
 PDFTable(leftMargin: CGFloat, yPosition: PDFTableStartingYPosition,
   items: [[PDFTableItem]], maxWidth: CGFloat?, topMargin: CGFloat)
