@@ -1,6 +1,8 @@
 # Swift PDF Generator
 
-A lightweight PDF generator built in Swift. You can install it using Swift Package Manager. You can check out our [sample project here](https://github.com/wearesurge/Swift-PDF-Sample-App).
+A lightweight PDF generator built in Swift. You can install it using Swift Package Manager. Check out our [sample project here](https://github.com/wearesurge/Swift-PDF-Sample-App).
+
+`import PDF_Generator`
 
 ## Create a label
 ```swift
