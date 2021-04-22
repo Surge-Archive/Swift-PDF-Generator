@@ -193,6 +193,7 @@ extension PDFCreator {
             // A cell marked as large will span the width of two cells
             let actualCellWidth = paddedCellWidth * item.horizontalScaleFactor
             
+            largestCellHeight = max(largestCellHeight, cellHeight)
             let paddedCellHeight = largestCellHeight + (verticalCellPadding * 2)
             
             // Add background color if available
@@ -214,8 +215,6 @@ extension PDFCreator {
                 let colorRect = CGRect(x: cellXPosition, y: rowYPosition, width: 5, height: paddedCellHeight)
                 drawRectangle(in: colorRect, color: markerColor, drawContext: drawContext)
             }
-            
-            largestCellHeight = max(largestCellHeight, cellHeight)
         }
         
         // Adjust row's position to begin after current row
