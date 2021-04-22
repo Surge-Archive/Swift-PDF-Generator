@@ -14,7 +14,7 @@ public struct PDFTable: PDFObject, Equatable {
     var maxWidth: CGFloat?
     var topMargin: CGFloat
     
-    internal init(leftMargin: CGFloat = 0, yPosition: PDFTableStartingYPosition = .auto, items: [[PDFTableItem]], maxWidth: CGFloat? = nil, topMargin: CGFloat = 20) {
+    public init(leftMargin: CGFloat = 0, yPosition: PDFTableStartingYPosition = .auto, items: [[PDFTableItem]], maxWidth: CGFloat? = nil, topMargin: CGFloat = 20) {
         self.leftMargin = leftMargin
         self.yPosition = yPosition
         self.items = items
