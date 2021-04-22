@@ -69,10 +69,10 @@ public class PDFCreator: NSObject {
         // Append 20 for spacing before table
         switch table.yPosition {
         case .auto:
-            tableYPosition = latestYPositionAtTableAlignment + table.topMargin
+            tableYPosition = latestYPositionAtTableAlignment + (table.topMargin ?? 20)
         case .newPage:
             newPage(context)
-            tableYPosition = pageAttributes.pageMargin.top
+            tableYPosition = pageAttributes.pageMargin.top + (table.topMargin ?? 0)
         case .fixed(let position):
             tableYPosition = position
         }

@@ -12,9 +12,9 @@ public struct PDFTable: PDFObject, Equatable {
     var yPosition: PDFTableStartingYPosition
     var items: [[PDFTableItem]]
     var maxWidth: CGFloat?
-    var topMargin: CGFloat
+    var topMargin: CGFloat?
     
-    public init(leftMargin: CGFloat = 0, yPosition: PDFTableStartingYPosition = .auto, items: [[PDFTableItem]], maxWidth: CGFloat? = nil, topMargin: CGFloat = 20) {
+    public init(leftMargin: CGFloat = 0, yPosition: PDFTableStartingYPosition = .auto, items: [[PDFTableItem]], maxWidth: CGFloat? = nil, topMargin: CGFloat? = nil) {
         self.leftMargin = leftMargin
         self.yPosition = yPosition
         self.items = items
